@@ -6,7 +6,6 @@
 
 local drift = false
 local kmh = 3.6
-local drift_speed_limit = 130.00
 CreateThread(function()
     while true do
         Wait(0)
@@ -16,7 +15,7 @@ CreateThread(function()
 
             if GetPedInVehicleSeat(GetCar(), -1) == GetPed() then
 
-                if CarSpeed <= 130.00 then  
+                if CarSpeed <= 130.00 then   -- (130.00 = 130km/h) Remplacer juste le nombre de km que vous voulez
                     if drift then
                         SetVehicleReduceGrip(GetCar(), true)
                     else
