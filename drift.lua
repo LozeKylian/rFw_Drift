@@ -3,7 +3,7 @@
 ----------------------------------Touche de base I----------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
-
+ESX = nil
 local drift = false
 local kmh = 3.6
 CreateThread(function()
@@ -30,7 +30,7 @@ RegisterCommand('+drift', function()
     --Presse I donc le drift s'active
     drift = true
     if IsPedInAnyVehicle(GetPed(), false) then
-        ShowNotification("Le ~g~drift ~w~est disponible ~o~uniquement ~r~en dessous de 130 km/h.")
+        ESX.ShowNotification("Le ~g~drift ~w~est disponible ~o~uniquement ~r~en dessous de 130 km/h.")
     end
 end, false)
 RegisterCommand('-drift', function()
